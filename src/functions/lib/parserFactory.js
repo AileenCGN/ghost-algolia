@@ -11,6 +11,7 @@ const parserFactory = () => ({
 
     const cleanhtml = striptags(post.html, ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']);
     const nodes = parseFragment(cleanhtml).childNodes;
+    console.log('parse -> nodes', nodes);
 
     if (nodes.length !== 0) {
       // can that be true even with an empty doc?
